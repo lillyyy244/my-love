@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday My Love ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 420px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 25px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+    animation: fadeIn 2s ease;
+}
+
+img {
+    width: 190px;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 6px solid #ff5c8a;
+    box-shadow: 0 0 25px #ff5c8a;
+    animation: glow 2.5s infinite alternate;
+}
+
+h1 {
+    color: #ff3366;
+    margin-top: 15px;
+}
+
+p {
+    color: #444;
+    font-size: 15px;
+    line-height: 1.7;
+}
+
+footer {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #888;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+
+@keyframes glow {
+    from {box-shadow: 0 0 15px #ff5c8a;}
+    to {box-shadow: 0 0 35px #ff5c8a;}
+}
+
+/* floating hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    color: #ff4d6d;
+    font-size: 20px;
+    animation: floatUp 6s linear infinite;
+    opacity: 0.7;
+}
+
+@keyframes floatUp {
+    0% {transform: translateY(0); opacity: 0;}
+    10% {opacity: 1;}
+    100% {transform: translateY(-110vh); opacity: 0;}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <img src="love.jpg" alt="My Love">
+    <h1>Happy Birthday ❤️</h1>
+    <p>
+        I honestly wasn’t planning to fall in love at all, but everything changed the moment we started talking. With every conversation, I felt myself getting more attached to you, more comfortable, more sure that you are the one my heart chose without permission. You made your way into my life so naturally that I didn’t even realize when you became so important to me. I know deep in my heart that you will never break my heart, and that trust is why I love you so, so much. I promise I’m never going to leave you. We will stay together, grow together, and live our happy life side by side, always choosing each other.
+    </p>
+    <footer>Forever yours ❤️</footer>
+</div>
+
+<script>
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.innerHTML = '❤️';
+    heart.style.left = Math.random() * 100 + 'vw';
+    heart.style.fontSize = Math.random() * 10 + 15 + 'px';
+    document.body.appendChild(heart);
+    setTimeout(() => heart.remove(), 6000);
+}
+setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
